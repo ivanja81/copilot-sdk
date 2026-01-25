@@ -1,0 +1,64 @@
+{
+  "name": "m365-knowledge-assistant",
+  "version": "0.1.0",
+  "description": "AI-powered knowledge assistant for Microsoft 365 using GitHub Copilot SDK",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@github/copilot-sdk": "latest",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "@azure/msal-node": "^2.6.0",
+    "@azure/identity": "^4.0.0",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "compression": "^1.7.4",
+    "zod": "^3.22.4",
+    "pino": "^9.0.0",
+    "pino-http": "^10.0.0",
+    "date-fns": "^3.3.0",
+    "dotenv": "^16.4.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/compression": "^1.7.5",
+    "@types/uuid": "^9.0.7",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^2.0.0",
+    "supertest": "^7.0.0",
+    "@types/supertest": "^6.0.2",
+    "msw": "^2.1.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.0",
+    "pino-pretty": "^11.0.0",
+    "@vitest/coverage-v8": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "copilot",
+    "microsoft365",
+    "sharepoint",
+    "teams",
+    "ai-assistant"
+  ],
+  "author": "M365 Solution Engineer",
+  "license": "MIT"
+}
